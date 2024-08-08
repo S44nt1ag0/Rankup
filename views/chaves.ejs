@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Chaves</title>
+ </head>
+<body>
+
+  <div class='pre-loader'></div>
+
+  <div class="nav">
+      <div class="nav-central-novo">
+          <div class="nav-grid">
+  
+              <div class="logo-nav-novo">
+                  <h1> Bem vindo, <span><%= dados.user %></span></h1>
+                  <a>Painel Administrativo</a>
+              </div>
+  
+              <div class="nav-opc-novo centralizar">
+                  <button id="back-painel" class="exit"> Voltar </button>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+
+  <div class="container descricao-novo wow animated fadeInUp">
+    
+    <div class="dricricao-img">
+      <img src="./img/icon/patolino3.png" alt="">
+    </div>
+
+    <div class="dricricao-conteudo">
+        <h1>Chaves Api</h1>
+        <a>Acompanhe abaixo os dados</a>
+    
+        <br>
+    
+        <input id="Authorization_ML" type="text" class="form-control" placeholder="MP: <%= info[0].authorization_ML %>" aria-describedby="basic-addon2" required="" disabled>
+        <input id="WebHook" type="text" class="form-control" placeholder="WebHook: <%= info[0].WebHook %>" aria-describedby="basic-addon2" required="" disabled>
+        <input id="valor_inscricao" type="text" class="form-control" placeholder="Valor: <%= info[0].valor %>$" aria-describedby="basic-addon2" required="" disabled>
+    </div>
+
+  </div>
+
+<%- include("./telas/footer") %>
+
+</body>
+</html>

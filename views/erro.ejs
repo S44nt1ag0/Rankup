@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Erro - 404</title>
+</head>
+<body>
+
+<div class='pre-loader'></div>
+
+<div class="nav">
+    <div class="nav-central">
+        <div class="nav-grid">
+
+            <div class="logo-nav centralizar">
+                <img id="logo" src="./img/logo.png" alt="">
+            </div>
+
+            <div class="nav-opc centralizar">
+                <button id="nav-error-voltar"> voltar </button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-error">
+        <h1>404</h1>
+        <a>Esta pagina, não existe!</a>
+        <button id="error-voltar"> Voltar </button>
+    </div>
+</div>
+
+<%- include("./telas/footer") %>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Dash</title>
+</head>
+
+<body>
+
+    <div class='pre-loader'></div>
+
+    <div class="nav">
+        <div class="nav-central">
+            <div class="nav-grid-novo">
+    
+                <div class="logo-nav novo centralizar">
+                    <img src='https://ui-avatars.com/api/?name=<%= dados["nome"] %>&background=161616&color=fff&size=128' alt="">
+
+                    <div class="nav-info">
+                        <h2>👋 Olá, <span><%= dados["nome"] %></span> </h2>
+                        <a>Seja bem vindo ao seu painel de usuario</a>
+                    </div>
+                </div>
+    
+                <div class="nav-opc centralizar">
+                    <button id="sair"> Sair </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container wow animated fadeInUp">
+        <div class="container-home">
+
+            <div class="menu-opc centralizar">
+                
+                <div class="box-menu-opc">
+                    <img src="./img/icon/grupo.png" alt="">
+                    <h1>Grupo</h1>
+                    <a>Seus Grupos</a>
+                    <button id="grupo"> Acessar </button>
+                </div>
+
+                <div class="box-menu-opc">
+                    <img id="config" src="./img/icon/sword.png" alt="">
+                    <h1>Adversario</h1>
+                    <a>Seus Adversarios</a>
+                    <button id="adversario"> Acessar </button>
+                </div>
+
+                <div class="box-menu-opc">
+                    <img id="pagamento" src="./img/icon/recibo.png" alt="">
+                    <h1>Pagamento</h1>
+                    <a>Seus Pagamentos</a>
+                    <button id="order"> Acessar </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="recado wow animated fadeInUp">
+        <div class="recado-centro">
+            
+            <div class="recado-conteudo">
+                <h1>Boa Sorte🔥</h1>
+                <p> Grupo Anarquia: Mostrem o que vocês têm de melhor! Desafiem as expectativas e joguem com coração e garra. Vamos lá! entre em nosso grupo do Discord.</p>
+            </div>
+
+            <div class="recado-grupo">
+                <img id="img-float" onclick='window.open("https://discord.com/invite/xYJK2cSAtG", "_blank");' src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3R2MDU5NWE5bzNoMzhjNGQ0ZTRkbTVtMXIwZXdkeTEzM3FxbW93ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/G9iNGjpV4sD4O6o778/giphy.gif" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <%- include("./telas/footer") %>
+
+</body>
+
+</html>

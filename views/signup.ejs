@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Signup</title>
+</head>
+<body>
+
+    <div class='pre-loader'></div>
+
+    <div class="nav">
+        <div class="nav-central">
+            <div class="nav-grid">
+    
+                <div class="logo-nav centralizar">
+                    <img src="./img/logo.png" alt="">
+                </div>
+    
+                <div class="nav-opc centralizar">
+                    <button id="voltar"> Voltar </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container wow animated fadeInUp">
+        <div class="container-central login">
+
+            <div class="login-img cadastro">
+                <img src="./img/icon/sign.png" alt="">
+                <h1> Fazer Cadastro </h1>
+                <p>Guarde Seus dados de acesso</p>
+            </div>
+
+            <div class="login-conteudo">
+                
+                <h3>Cadastrar-Se</h3>
+                <a>Realize seu Cadastro</a>
+
+                <input id="email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon2" required="">
+                <input id="usuario" type="text" class="form-control" placeholder="Usuario" aria-describedby="basic-addon2" required="">
+                <input id="senha" type="password" class="form-control" placeholder="Senha" aria-describedby="basic-addon2" required="">
+
+                <div class="btns">
+                    <button id="cadastro"> Cadastrar </button>
+                    <a id="sign"> Entrar </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    
+<%- include("./telas/footer") %>
+</body>
+</html>

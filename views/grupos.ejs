@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Grupos</title>
+ </head>
+<body>
+
+  <div class='pre-loader'></div>
+
+  <div class="nav">
+      <div class="nav-central">
+          <div class="nav-grid">
+  
+              <div class="logo-nav centralizar">
+                  <img id="logo" src="./img/logo.png" alt="">
+              </div>
+  
+              <div class="nav-opc centralizar">
+                  <button id="dash"> voltar </button>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+
+  <div class="container wow animated fadeInUp">
+    <div class="container-grupo">
+      <div class="grid-gps">
+
+        <div class="grupos-recado">
+          <img src="./img/icon/grupo-de-pessoas.png" alt="">
+          <h1>Grupos</h1>
+        </div>
+
+        <div class="grupo-conteudo">
+
+          <h1>Seus Grupos</h1>
+          <a>Acompanhe seu grupo abaixo!</a>
+
+        <% if (typeof grupos !== 'undefined' && grupos !== null) { %>
+
+          <div class="centralizar-grupo-conteudo">
+            
+            <div class="grupo-line">
+              <div class="gp-line-grid">
+                
+                <div class="nome-gp">
+                  <h3><%= grupos.nome %></h3>
+                </div>
+
+                <div class="opc-gps">
+                  <a id="editar"> Editar </a>
+                  <a id="ver"> ver </a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="box-grupo-ver" style="display: none;">
+              
+              <h1>Participantes</h1>
+
+              <% if (grupos.participantes.length < 2) { %>
+
+                  <input id="participante1" maxlength="25" type="text" class="form-control" placeholder="Participante 1" aria-describedby="basic-addon2">
+                  <input id="participante2" maxlength="25" type="text" class="form-control" placeholder="Participante 2" aria-describedby="basic-addon2">
+                  <button id="add-equipe">Adicionar</button>
+
+              <% } else { %>
+
+                <% if (Array.isArray(grupos.participantes)) { %>
+                  <% grupos.participantes.forEach(participante => { %>
+                    <a><%= participante.nome %></a>
+                  <% }); %>
+                <% } else { %>
+                  <a><%= grupos.participantes.nome %></a>
+                <% } %>
+                
+              <% } %>
+
+            </div>
+
+          </div>
+
+        <% } else { %>
+
+          <div class="nenhum-grupo">
+            <h1>Nenhum Grupo Encontrado</h1>
+            <a>Nenhum grupo vinculado a seu usuario!</a>
+            <button id="criar"> Criar </button>
+          </div>
+
+          <div class="criar-grupo" style="display: none;">
+            <input id="nome_grupo" maxlength="25" type="text" class="form-control" placeholder="Nome Grupo" aria-describedby="basic-addon2">
+            <button id="create-grupo"> Adicionar </button>
+          </div>
+
+        <% } %>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+  <%- include("./telas/footer") %>
+
+</body>
+</html>

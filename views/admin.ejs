@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Admin</title>
+ </head>
+<body>
+
+  <div class='pre-loader'></div>
+
+  <div class="nav">
+      <div class="nav-central-novo">
+          <div class="nav-grid">
+  
+              <div class="logo-nav-novo">
+                  <h1> Bem vindo, <span><%= dados.user %></span></h1>
+                  <a>Painel Administrativo</a>
+              </div>
+  
+              <div class="nav-opc-novo centralizar">
+                  <button class="exit"> Sair </button>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+
+  <div class="container adm wow animated fadeInUp">
+
+    <h1>Opções Admin</h1>
+    <a>Acompanhe abaixo os dados</a>
+
+    <div class="dash-admin-container">
+        
+      <div class="box-admin">
+        <h1><%= info[0].pix %>$</h1>
+        <a>Arrecadado <span>Pix</span></a>
+        <button> Ver </button>
+      </div>
+  
+      <div class="box-admin">
+        <h1><i class="fa-solid fa-user"></i> <%= info[0].cadastrados %></h1>
+        <a>Cadastrados<span>User</span></a>
+        <button id="usuarios"> Ver </button>
+      </div>
+
+      <div class="box-admin">
+        <h1><i class="fa-solid fa-code"></i></h1>
+        <a>Chaves<span>Api</span></a>
+        <button id="chaves"> Ver </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container descricao">
+    
+    <div class="dricricao-img">
+      <img src="./img/icon/patolino2.png" alt="">
+    </div>
+
+    <div class="dricricao-conteudo">
+      <h1>🚨 Atenção</h1>
+      <h3>Nada Nessa Pagina pode Ser Divulgado, Esse é um Ambiente Administrativo de Produção</h3>
+    </div>
+
+  </div>
+
+<%- include("./telas/footer") %>
+
+</body>
+</html>

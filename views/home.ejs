@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Home</title>
+</head>
+<body>
+
+<div class='pre-loader'></div>
+
+<div class="nav">
+    <div class="nav-central">
+        <div class="nav-grid">
+
+            <div class="logo-nav centralizar">
+                <img src="./img/logo.png" alt="">
+            </div>
+
+            <div class="nav-opc centralizar">
+                <% if (dados) { %>
+
+                    <button class="me"> <i class="fa-solid fa-user"></i> </button>
+
+                <% } else { %>
+                <a>Sobre</a>
+                <button id="sign"> Entrar </button>
+                <% } %>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container wow animated fadeInUp">
+    <div class="container-central">
+    
+        <div class="ct-inscricao">
+            <h1 id="valor"><%= valor %>$</h1>
+            <a>Inscrição</a>
+            <p>As inscrições são pagas para ampliar o prêmio do primeiro colocado!</p>
+            <button id="inscrever"> Inscrever-Se </button>
+        </div>
+
+        <div class="ct-sobre-incricao">
+            <h1> Campeonato Anarquia </h1>
+            <p> O Anarquia é um campeonato exclusivo do Apocalipse Rysing, oferecendo uma plataforma para você demonstrar suas habilidades e competir pelos melhores prêmios, incluindo um prêmio em dinheiro para o vencedor. Não perca a chance de se destacar; inscreva-se agora e participe dessa emocionante competição!</p>
+            
+            <div class="containers-incricao">
+                
+                <div class="box-ct">
+                    <img src="./img/icon/calendario.png" alt="">
+                    <h4>Data</h4>
+                    <p>30/05/2024</p>
+                </div>
+
+                <div class="box-ct">
+                    <img src="./img/icon/trofeu.png" alt="">
+                    <h4>Prêmios</h4>
+                    <p>dinheiro pix</p>
+                </div>
+
+                <div class="box-ct">
+                    <img src="./img/icon/ingressos.png" alt="">
+                    <h4>Inscrições</h4>
+                    <p>Abertas</p>
+                </div>
+
+
+                <div class="box-ct">
+                    <img src="./img/icon/spyware.png" alt="">
+                    <h4>Anti-Hack</h4>
+                    <p>Moderador Online</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-central rank centralizar">
+        
+        <div class="box-rank wow animated fadeInUp">
+            <img src="./img/icon/rank/2.png" alt="">
+            <h2> Segundo Lugar </h2>
+            <a> Premiação </a>
+            <h1 id="valores"> 100$ </h1>
+        </div>
+
+        <div class="box-rank wow animated fadeInUp">
+            <img src="./img/icon/rank/1.png" alt="">
+            <h2> Primeiro Lugar </h2>
+            <a> Premiação </a>
+            <h1 id="valores"> 150$ </h1>
+        </div>
+
+        <div class="box-rank wow animated fadeInUp">
+            <img src="./img/icon/rank/3.png" alt="">
+            <h2> Terceiro Lugar </h2>
+            <a> Premiação </a>
+            <h1 id="valores"> 50$ </h1>
+        </div>
+
+    </div>
+</div>
+
+<div class="container larger">
+
+    <div class="title-responsaveis wow animated fadeInDown">
+        <h1>Responsaveis</h1>
+        <a>Fale sobre o evento apenas com os responsaveis!</a>
+    </div>
+
+    <div class="container-responsaveis wow animated fadeInUp">
+
+        <div class="responsaveis-card">
+
+            <img src="./img/user/santiago.png" alt="">
+
+            <h1>Santiago</h1>
+            <span id="copiar-sati"> santiago20098 <i class="fa-regular fa-copy"></i></span>
+
+            <div class="cargos">
+                <label> Admin </label>
+                <label> Dev </label>
+            </div>
+            
+        </div>
+
+        <div class="responsaveis-card">
+            <img src="./img/user/duh.png" alt="">
+
+            <h1>Duh</h1>
+            <span id="copiar-duh"> _duuh.ehz <i class="fa-regular fa-copy"></i></span>
+
+            <div class="cargos">
+                <label> Admin </label>
+                <label> Mod 🔨 </label>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="discord-container wow animated fadeInUp">
+        
+        <div class="discord-card-img">
+            <h1> Discord Grupo </h1>
+            <a>Junte-se ao nosso grupo de Discord para gamers! Encontre amigos, discuta estratégias e divirta-se em eventos exclusivos. Não jogue mais sozinho - junte-se a nós agora!</a>
+            <img src="./img/icon/ok.gif" alt="">
+        </div>
+
+        <div class="discord-card-embed">
+            <iframe src="https://discord.com/widget?id=1181376133716004924&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+
+    </div>
+</div>
+    
+<%- include("./telas/footer") %>
+
+</body>
+</html>

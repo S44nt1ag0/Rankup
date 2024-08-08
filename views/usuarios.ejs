@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Chaves</title>
+ </head>
+<body>
+
+  <div class='pre-loader'></div>
+
+  <div class="nav">
+      <div class="nav-central-novo">
+          <div class="nav-grid">
+  
+              <div class="logo-nav-novo">
+                  <h1> Bem vindo, <span><%= dados.user %></span></h1>
+                  <a>Painel Administrativo</a>
+              </div>
+  
+              <div class="nav-opc-novo centralizar">
+                  <button id="back-painel" class="exit"> Voltar </button>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+
+  <div class="container descricao-novo wow animated fadeInUp">
+
+    <div class="dricricao-conteudo-novo">
+
+        <h1>Cadastrados</h1>
+        <a>Acompanhe abaixo os dados</a>
+
+        <br> 
+        
+        <% usuarios.forEach(function(usuario) { %>
+            <div class="conteudo-usuario">
+                <table>
+                    <tr>
+                        <td><i class="fa-solid fa-user"></i> <%= usuario.nome %></td>
+                        <td><%= usuario.email %></td>
+                        <td><%= usuario.membership === 1 ? "Pago" : "Free" %></td>
+                    </tr>
+                </table>
+            </div>
+        <% }); %>
+    </div>
+
+  </div>
+
+  <%- include("./telas/footer") %>
+
+</body>
+</html>

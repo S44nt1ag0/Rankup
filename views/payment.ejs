@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Pagamento</title>
+</head>
+<body>
+
+    <div class='pre-loader'></div>
+
+    <div class="nav-pagamento">
+        <divu class="container-nav-pagamento">
+            <h2>Area de <span>Pagamento</span></h2>
+            <a>Abaixo siga as instruçoes e realize o pagamento!</a>
+        </divu>
+    </div>
+
+    <div class="container-pagamento wow animated fadeInUp">
+     <div class="ct-pagamento">
+        
+        <div class="pix">
+            <img id="pix-img" src="./img/icon/pix.png" alt="">
+        </div>
+
+        <div class="pix-sucesso" style="display: none;">
+            <img src="./img/icon/sucesso.png" alt="">
+            <h3>Sucesso</h3>
+
+            <a>Tax <span id="tax_id">B543FF-64333GT-YTRDDD5</span></a>
+            <a>ID <span id="id_pix"><%= valor %>$</span></a>
+            
+            <button id="recibo"> Baixar Recibo </button>
+            <a>Baixe o Recibo e o guarde!</a>
+
+        </div>
+
+        <div class="pix-pagar" style="display: none;">
+            <h1>Pix Gerado</h1>
+            <a id="scan">Escanear</a>
+
+            <textarea id="copia_cola"></textarea>
+            <a id="transacao"></a>
+
+            <img id="qr_code" src="./img/icon/qrcode.png" alt="">
+            <a id="copiar"> Copiar Codigo <i class="fa-regular fa-copy"></i></a>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <button id="pix-paguei"> Paguei </button>
+
+        </div>
+
+        <div class="pix-container">
+            
+            <div class="tutorial">
+                
+                <div class="aviso-pix border">
+                    <img src="./img/icon/alerta.png" alt="">
+                    <a> Durante o processo de pagamento não recarregue a pagina de forma alguma, pois todo progresso sera perdido e tera de começar denovo!</a>
+                </div>
+
+                <div class="aviso-pix border">
+                    <img src="./img/icon/restituicao.png" alt="">
+                    <a> Caso recarregue a pagina impossibilitara qualquer reembolso. Por favor, evite recarregar para garantir uma transação bem-sucedida.</a>
+                </div>
+
+            </div>
+
+            <div class="div-btn-pix">
+
+                <h3>Você irá pagar <span><%= valor %>$</span></h3>
+
+                <div class="btn-do-pix">
+                    <button id="pagar"> Pagar </button>
+                </div>
+            </div>
+
+        </div>
+
+     </div>
+    </div>
+    
+
+<%- include("./telas/footer") %>
+</body>
+</html>

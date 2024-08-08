@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Adversarios</title>
+ </head>
+<body>
+
+<div class='pre-loader'></div>
+
+<div class="nav">
+    <div class="nav-central">
+        <div class="nav-grid">
+
+            <div class="logo-nav centralizar">
+                <img id="logo" src="./img/logo.png" alt="">
+            </div>
+
+            <div class="nav-opc centralizar">
+                <button id="dash"> voltar </button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container enermy wow animated fadeInUp">
+    <div class="container-enemy">
+        <h1>⚔️Inimigos</h1>
+        <a>Durante o evento, acompanhe seus proximos adversarios por aqui!</a>
+        <span id="data"> Ocorrera 30/05 </span>
+
+        <div class="equiep-war">
+
+        <% if (data.rival === null || data.rival === undefined || data.rival.length === 0) { %>
+
+        <div class="nada-grupo" style="text-align: center;">
+
+            <div class="roblox">
+                <img src="./img/icon/roblox2.png" alt="">
+            </div>
+
+            <div class="nada-msg">
+                <h1>Nada</h1>
+                <a>Nenhuma Guerra Arranjada, Volta mas Tarde.</a>
+                <button class="back">Voltar</button>
+            </div>
+
+        </div>
+
+        <% } else { %>
+
+            <div class="square">
+                <% data.grupo.forEach(group => { %>
+                <h1><%= group.nome %></h1>
+                    <% group.participantes.forEach(participant => { %>
+                        <a><%= participant.nome %></a>
+                    <% }); %>
+                <% }); %>
+            </div>
+
+            <div class="line">
+                <img src="./img/icon/vs.png" alt="">
+            </div>
+
+            <% if (data.rival === null || data.rival === undefined || data.rival.length === 0) { %>
+                <div class="square enemy null">
+                    <h1>Nada</h1>
+                    <a>Em Breve</a>
+                </div>
+            <% } else { %>
+                <div class="square enemy">
+                    <% data.rival.forEach(rival => { %>
+                        <h1><%= rival.nome %></h1>
+                        <% rival.participantes.forEach(participant => { %>
+                          <a><%= participant.nome %></a>
+                        <% }); %>
+                      <% }); %>
+                </div>
+            <% } %>
+
+        <% } %>
+
+        </div>
+
+    </div>
+</div>
+
+<%- include("./telas/footer") %>
+
+</body>
+</html>

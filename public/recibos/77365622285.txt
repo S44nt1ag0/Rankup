@@ -1,0 +1,6 @@
+Recibo Anarquia 
+
+ID Transação: PIXE0000000020240504150513698318206 
+ID Pagamento: 77365622285 
+Valor: 10$ 
+Data: 04/05/2024

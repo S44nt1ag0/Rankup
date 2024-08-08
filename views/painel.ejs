@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Painel</title>
+ </head>
+<body>
+
+  <div class='pre-loader'></div>
+
+  <div class="nav">
+      <div class="nav-central">
+          <div class="nav-grid">
+  
+              <div class="logo-nav centralizar">
+                  <img id="logo" src="./img/logo.png" alt="">
+              </div>
+  
+              <div class="nav-opc centralizar">
+                  <button id="dash"> voltar </button>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <div class="login-painel-container">
+
+        <div class="login-adm-img">
+            <img src="./img/icon/admin.png" alt="">
+        </div>
+
+        <div class="login-admin-conteudo">
+            <h1>Login Admin</h1>
+            <a>Apenas Administradores</a>
+            <input id="usuario" type="text" class="form-control" placeholder="Usuario" aria-describedby="basic-addon2">
+            <input id="senha" type="password" class="form-control" placeholder="Senha" aria-describedby="basic-addon2">
+            <button id="entrar-admin"> Entrar </button>
+        </div>
+
+    </div>
+  </div>
+
+
+  <%- include("./telas/footer") %>
+
+</body>
+</html>

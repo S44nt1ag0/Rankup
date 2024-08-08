@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./telas/headers") %>
+    <title>Pagamentos</title>
+</head>
+<body>
+
+    <div class='pre-loader'></div>
+
+    <div class="nav">
+        <div class="nav-central">
+            <div class="nav-grid">
+    
+                <div class="logo-nav centralizar">
+                    <img id="logo" src="./img/logo.png" alt="">
+                </div>
+    
+                <div class="nav-opc centralizar">
+                    <button id="dash"> voltar </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container wow animated fadeInUp">
+        <div class="container-order">
+            <h1>Seus Pagamentos</h1>
+            <a>Acompanhe abaixo os detelhes!</a>
+
+            <% if (dados) { %>
+
+            <div class="pagamentos-table">
+    
+                <a id="transacao"><%= dados.id_pagamento %></a>
+
+                <div class="payment-table">
+                    <table>
+                        <tr>
+                          <th>Id</th>
+                          <th>Id Pagamento</th>
+                          <th>Id Transação</th>
+                          <th>Valor</th>
+                        </tr>
+                        <tr>
+                            <td><span><%= dados.id %></span></td>
+                            <td><span><%= dados.transaction_id %></span></td>
+                            <td><span><%= dados.id_pagamento %></span></td>
+                            <td><span><%= valor %>$</span></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <% } else { %>
+                <p>Não há Dados Disponíveis</p>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="container pag wow animated fadeInUp">
+        <div class="recado-pagamento">
+                
+            <div class="recado-pagamento-img">
+                <img src="./img/icon/roblox2.png" alt="">
+            </div>
+    
+            <div class="pagamento-recado">
+                <h1>Duvidas?</h1>
+                <a>Está com alguma duvida referente a seus pagamentos <br> Apresente o recibo para algum admin!</a>
+                <button id="recibo"> Baixar Recibo </button>
+            </div>
+    
+        </div>
+    </div>
+
+<%- include("./telas/footer") %>
+
+</body>
+</html>
